@@ -3,3 +3,4 @@ obj
 bin
 wwwroot
 package-lock.json
+index.js

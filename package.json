@@ -5,6 +5,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start-deploy-project": "npm i && npm run release && dotnet run",
     "build": "webpack --mode=development --watch",
     "release": "webpack --mode=production",
     "publish": "npm run release && dotnet publish -c Release"

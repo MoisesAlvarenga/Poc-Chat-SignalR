@@ -1,7 +1,5 @@
-# Rode os seguintes comandos
+# Rode o seguinte comando
 
-- npm i
-- npm run release
-- dotnet run
+- npm run start-deploy-project
 
-# Seguindo essa ordem, o projeto estará de pé.
+## Após rodar o comando, a dependências necessárias serão instaladas e o projeto sera buildado e já vai estar rodando no endereço http://localhost:5033
