@@ -4,7 +4,7 @@ import "./css/main.css";
 const divMessages: HTMLDivElement = document.querySelector("#divMessages");
 const tbMessage: HTMLInputElement = document.querySelector("#tbMessage");
 const btnSend: HTMLButtonElement = document.querySelector("#btnSend");
-const username = new Date().getTime();
+const tbUser: HTMLInputElement = document.querySelector("#tbUser");
 
 const connection = new signalR.HubConnectionBuilder()
     .withUrl("/hub")
@@ -30,6 +30,6 @@ tbMessage.addEventListener("keyup", (e: KeyboardEvent) => {
 btnSend.addEventListener("click", send);
 
 function send() {
-  connection.send("newMessage", username, tbMessage.value)
+  connection.send("newMessage", tbUser.value, tbMessage.value)
     .then(() => (tbMessage.value = ""));
 }
